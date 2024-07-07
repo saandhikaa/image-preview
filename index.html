@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display Page</title>
+</head>
+<body>
+    <h1>Image Display Page</h1>
+    <p>Paste the image URL below:</p>
+    <input type="text" id="imageUrlInput" placeholder="Enter image URL">
+    <button onclick="displayImage()">Show Image</button>
+    <div id="imageContainer"></div>
+
+    <script>
+        function displayImage() {
+            const imageUrl = document.getElementById("imageUrlInput").value;
+            const imageContainer = document.getElementById("imageContainer");
+            imageContainer.innerHTML = `<img src="${imageUrl}" alt="Image from URL">`;
+        }
+    </script>
+</body>
+</html>
