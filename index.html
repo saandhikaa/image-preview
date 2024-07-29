@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Display Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Preview - Display Images from URLs</title>
+  <meta name="description" content="Image Preview allows you to display images by providing a URL. Quickly view and share your images.">
+  <meta name="keywords" content="Image Preview, display image, URL to image, show image from URL, image viewer">
+  <meta name="author" content="saandhikaa">
+  <meta property="og:title" content="Image Preview - Display Images from URLs">
+  <meta property="og:description" content="Image Preview allows you to display images by providing a URL. Quickly view and share your images.">
+  <meta property="og:image" content="https://saandhikaa.github.io/image-preview/images/preview.jpg">
+  <meta property="og:url" content="https://saandhikaa.github.io/image-preview">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Image Display Page</h1>
-    <p>Paste the image URL below:</p>
-    <input type="text" id="imageUrlInput" placeholder="Enter image URL">
-    <button onclick="displayImage()">Show Image</button>
-    <div id="imageContainer"></div>
 
-    <script>
-        function displayImage() {
-            const imageUrl = document.getElementById("imageUrlInput").value;
-            const imageContainer = document.getElementById("imageContainer");
-            imageContainer.innerHTML = `<img src="${imageUrl}" alt="Image from URL">`;
-        }
-    </script>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Image Preview</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Display Images from URLs</h2>
+        <p>Paste the image URL below:</p>
+        <div class="input-container">
+          <input type="text" id="imageUrlInput" placeholder="Enter image URL">
+          <button class="button-outlined" onclick="clearInput()">Clear</button>
+          <button class="button-contained" onclick="displayImage()">Show Image</button>
+        </div>
+        <div id="imageContainer"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 <a href="https://github.com/saandhikaa" target="_blank">saandhikaa</a>. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
